@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- favicon link -->
+    <link rel="shortcut icon" type="image/x-icon" href="/public/favicon.ico" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fingescon</title>
+
+    <!-- Google font link -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- Tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+    <!-- Alpine  -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <link rel="stylesheet" href="/styles.css">
+
+  </head>
+  <body>
+    <header x-data="{navbarOpen: false}" class="absolute lef-0 top-0 z-50 bg-white/90 w-full backdrop-blur">
+      <div class="mx-auto h-[90px] max-w-7xl px-8 md:px-6">
+        <div class="relative flex h-full items-center justify-between border-b border-slate-500/10">
+          <!-- Logo -->
+          <div class="w-[15rem] max-w-full">
+            <a href="#">
+              <img src="./public/assets/logo.png" alt="Logo" class="w-full">
+            </a>
+          </div>
+
+          <!-- Menu -->
+          <div class="flex w-full items-center justify-between">
+            <nav x-transition :class="!navbarOpen && 'hidden'" id="navbarCollapse" class="absolute right-0 top-[90px] w-full max-w-[350px] rounded-lg border border-red-200 bg-white py-5 px-6 shadow-lg shadow-red-400/5 transition-all lg:static lg:block lg:max-w-full lg:border-none lg:shadow-none lg:bg-transparent lg:px-0 lg:py-0">
+              <ul class="flex flex-col justify-center gap-8 lg:flex-row">
+                <li><a href="#" class="text-lg font-medium text-slate-700 duration-200 hover:text-red-600 lg:text-base">Início</a></li>
+                <li><a href="#" class="text-lg font-medium text-slate-700 duration-200 hover:text-red-600 lg:text-base">Serviços</a></li>
+                <li><a href="#" class="text-lg font-medium text-slate-700 duration-200 hover:text-red-600 lg:text-base">Sobre nós</a></li>
+                <li><a href="#" class="text-lg font-medium text-slate-700 duration-200 hover:text-red-600 lg:text-base">Portfolio</a></li>
+                <li><a href="#" class="text-lg font-medium text-slate-700 duration-200 hover:text-red-600 lg:text-base">Valores</a></li>
+                <li><a href="#" class="text-lg font-medium text-slate-700 duration-200 hover:text-red-600 lg:text-base">Contatos</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Menu Button -->
+          <div class="flex">
+            <a href="#" class="mr-10 hidden rounded-md bg-red-500 px-8 py-2.5 font-semibold text-white shadow-md shadow-red-500/20 duration-200 hover:bg-red-600 sm:block lg:mr-0">
+              Registe
+            </a>
+
+            <button @click="navbarOpen = !navbarOpen" :class="navbarOpen && 'navbarToggleActive'" id="navbarToggle" class="block lg:hidden">
+              <ion-icon name="menu-outline" class="text-4xl text-red-500"></ion-icon>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+
+    <!-- <script type="module" src="/main.js"></script> -->
+  </body>
+</html>
