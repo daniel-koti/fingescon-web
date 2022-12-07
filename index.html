@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-pt">
-
-<head>
+  <head>
   <meta charset="UTF-8" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,284 +25,280 @@
 
   <link rel="stylesheet" href="/styles.css">
 
-</head>
-
-<body>
+  </head>
+  <body>
   <header x-data="{navbarOpen: false}" class="absolute sticky lef-0 top-0 z-50 bg-white/90 w-full backdrop-blur">
-    <div class="mx-auto h-[90px] max-w-7xl px-8 md:px-6">
-      <div class="relative flex h-full items-center justify-between border-b border-slate-500/10">
-        <!-- Logo -->
-        <div class="w-[15rem] max-w-full">
-          <a href="#">
-            <img src="./public/assets/logo.png" alt="Logo" class="w-full">
-          </a>
-        </div>
-
-        <!-- Menu -->
-        <div class="flex w-full items-center justify-between">
-          <nav x-transition :class="!navbarOpen && 'hidden'" id="navbarCollapse"
-            class="absolute right-0 top-[90px] w-full max-w-[350px] rounded-lg border border-red-200 bg-white py-5 px-6 shadow-lg shadow-red-400/5 transition-all lg:static lg:block lg:max-w-full lg:border-none lg:shadow-none lg:bg-transparent lg:px-0 lg:py-0">
-            <ul class="flex flex-col justify-center gap-8 lg:flex-row">
-              <li><a href="#"
-                  class="text-lg font-medium text-slate-700 duration-200 hover:text-red-600 lg:text-base">Início</a>
-              </li>
-              <li><a href="#about"
-                class="text-lg font-medium text-slate-700 duration-200 hover:text-red-600 lg:text-base">Sobre</a>
-              </li>
-              <li><a href="#goals"
-                  class="text-lg font-medium text-slate-700 duration-200 hover:text-red-600 lg:text-base">Missão</a>
-              </li>
-              
-              <li><a href="#services"
-                  class="text-lg font-medium text-slate-700 duration-200 hover:text-red-600 lg:text-base">Serviços</a>
-              </li>
-              <li><a href="#portfolio"
-                  class="text-lg font-medium text-slate-700 duration-200 hover:text-red-600 lg:text-base">Portfólio</a>
-              </li>
-              <li><a href="#contacts"
-                  class="text-lg font-medium text-slate-700 duration-200 hover:text-red-600 lg:text-base">Contatos</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-
-        <!-- Menu Button -->
-        <div class="flex">
-          <a href="#"
-            class="mr-10 hidden rounded-md bg-red-500 px-8 py-2.5 font-semibold text-white shadow-md shadow-red-500/20 duration-200 hover:bg-red-600 sm:block lg:mr-0">
-            Registe
-          </a>
-
-          <button @click="navbarOpen = !navbarOpen" :class="navbarOpen && 'navbarToggleActive'" id="navbarToggle"
-            class="block lg:hidden">
-            <ion-icon name="menu-outline" class="text-4xl text-red-500"></ion-icon>
-          </button>
-        </div>
-
+  <div class="mx-auto h-[90px] max-w-7xl px-8 md:px-6">
+    <div class="relative flex h-full items-center justify-between border-b border-slate-500/10">
+      <!-- Logo -->
+      <div class="w-[15rem] max-w-full">
+        <a href="#">
+          <img src="./public/assets/logotipo.png" alt="Logo" class="w-full">
+        </a>
       </div>
+
+      <!-- Menu -->
+      <div class="flex w-full items-center justify-between">
+        <nav x-transition :class="!navbarOpen && 'hidden'" id="navbarCollapse"
+          class="absolute right-0 top-[90px] w-full max-w-[350px] rounded-lg border border-red-200 bg-white py-5 px-6 shadow-lg shadow-red-400/5 transition-all lg:static lg:block lg:max-w-full lg:border-none lg:shadow-none lg:bg-transparent lg:px-0 lg:py-0">
+          <ul class="flex flex-col justify-center gap-8 lg:flex-row lg:justify-end">
+            <li><a href="#"
+                class="text-lg font-medium text-slate-700 duration-200 hover:text-red-600 lg:text-base">Início</a>
+            </li>
+            <li><a href="#about"
+              class="text-lg font-medium text-slate-700 duration-200 hover:text-red-600 lg:text-base">Sobre</a>
+            </li>
+            <li><a href="#goals"
+                class="text-lg font-medium text-slate-700 duration-200 hover:text-red-600 lg:text-base">Missão</a>
+            </li>
+            
+            <li><a href="#services"
+                class="text-lg font-medium text-slate-700 duration-200 hover:text-red-600 lg:text-base">Serviços</a>
+            </li>
+            <li><a href="#portfolio"
+                class="text-lg font-medium text-slate-700 duration-200 hover:text-red-600 lg:text-base">Portfólio</a>
+            </li>
+            <li><a href="#contacts"
+                class="text-lg font-medium text-slate-700 duration-200 hover:text-red-600 lg:text-base">Contatos</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Menu Button -->
+      <div class="flex">
+        <button @click="navbarOpen = !navbarOpen" :class="navbarOpen && 'navbarToggleActive'" id="navbarToggle"
+          class="block lg:hidden">
+          <ion-icon name="menu-outline" class="text-4xl text-red-500"></ion-icon>
+        </button>
+      </div>
+
     </div>
+  </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="relative bg-white py-16 lg:pt-[100px]">
-    <div class="mx-auto max-w-7xl px-8 md:px-6">
-      <div class="flex flex-wrap">
-        <div class="w-full lg:w-5/12">
-          <h1 class="text-slate-800 mb-3 text-4xl font-bold leading-snug sm:text-[42px] lg:text-[40px] xl:text-[42px]">O
-            Segredo está na visão de quem realmente conhece o <span class="text-red-600">mercado</span></h1>
-          <p class="text-slate-500 mb-8 max-w-[480px] text-base">A Fingescon vai além na gestão dos seus projectos,
-            implementando soluções inovadoras, e oferecendo a qualidade que precisa</p>
+  <section class="relative bg-white pt-16 lg:pt-[100px]">
+  <div class="mx-auto max-w-7xl px-8 md:px-6">
+    <div class="flex flex-wrap">
+      <div class="w-full lg:w-5/12">
+        <h1 class="text-slate-800 mb-3 text-4xl font-bold leading-snug sm:text-[42px] lg:text-[40px] xl:text-[42px]">O
+          Segredo está na visão de quem realmente conhece o <span class="text-red-600">mercado</span></h1>
+        <p class="text-slate-500 mb-8 max-w-[480px] text-base">A Fingescon vai além na gestão dos seus projectos,
+          implementando soluções inovadoras, e oferecendo a qualidade que precisa</p>
 
-          <button
-            class="flex items-center justify-center gap-2 w-full rounded-md bg-red-500 px-8 py-2.5 font-semibold text-white hover:bg-red-600 duration-200 sm:w-auto">
-            <ion-icon name="logo-whatsapp"></ion-icon>
-            Entre em contacto
-          </button>
+        <a
+          href="http://wa.me/244938103039" target="_blank"
+          class="flex items-center justify-center gap-2 w-full rounded-md bg-red-500 px-8 py-2.5 font-semibold text-white hover:bg-red-600 duration-200 lg:w-2/4 sm:w-auto">
+          <ion-icon name="logo-whatsapp"></ion-icon>
+          Entre em contacto
+        </a>
 
-          <!-- Brand Companies -->
-          <div class="mt-6 flex flex-wrap gap-4">
-            <img src="./public/assets/brand/brand.png" alt="brand"
-              class="w-32 cursor-pointer  duration-500 hover:scale-95 sm:w-36">
-            <img src="./public/assets/brand/brand3.png" alt="brand"
-              class="w-32 cursor-pointer  duration-500 hover:scale-95 sm:w-36">
-            <img src="./public/assets/brand/brand4.png" alt="brand"
-              class="w-32 cursor-pointer   duration-500 hover:scale-95 sm:w-36">
-            <img src="./public/assets/brand/brand2.png" alt="brand"
-              class="w-32 cursor-pointer  duration-500 hover:scale-95 sm:w-36">
-            <img src="./public/assets/brand/brand5.png" alt="brand"
-              class="w-32 cursor-pointer   duration-500 hover:scale-95 sm:w-36">
-            <img src="./public/assets/brand/brand6.png" alt="brand"
-              class="w-32 cursor-pointer   duration-500 hover:scale-95 sm:w-36">
-          </div>
+        <!-- Brand Companies -->
+        <div class="mt-6 flex flex-wrap gap-4">
+          <img src="./public/assets/brand/brand.png" alt="brand"
+            class="w-32 cursor-pointer  duration-500 hover:scale-95 sm:w-36">
+          <img src="./public/assets/brand/brand3.png" alt="brand"
+            class="w-32 cursor-pointer  duration-500 hover:scale-95 sm:w-36">
+          <img src="./public/assets/brand/brand4.png" alt="brand"
+            class="w-32 cursor-pointer   duration-500 hover:scale-95 sm:w-36">
+          <img src="./public/assets/brand/brand2.png" alt="brand"
+            class="w-32 cursor-pointer  duration-500 hover:scale-95 sm:w-36">
+          <img src="./public/assets/brand/brand5.png" alt="brand"
+            class="w-32 cursor-pointer   duration-500 hover:scale-95 sm:w-36">
+          <img src="./public/assets/brand/brand6.png" alt="brand"
+            class="w-32 cursor-pointer   duration-500 hover:scale-95 sm:w-36">
         </div>
+      </div>
 
-        <div class="hidden px-4 lg:block lg:w-1/12"></div>
+      <div class="hidden px-4 lg:block lg:w-1/12"></div>
 
-        <div class="w-full px-4 lg:w-6/12">
-          <div class="lg:ml-auto lg:text-right">
-            <div class="relative z-10 inline-block pt-11 lg:pt-0">
-              <img src="/public/assets/hero.svg" alt="" class="w-5/6 lg:ml-auto">
-            </div>
+      <div class="w-full px-4 lg:w-6/12">
+        <div class="lg:ml-auto lg:text-right">
+          <div class="relative z-10 inline-block pt-11 mb-[-6px] lg:pt-0">
+            <img src="/public/assets/african-business-woman.png" alt="" class="w-5/6 lg:ml-auto">
           </div>
         </div>
       </div>
     </div>
+  </div>
   </section>
 
   <!-- About Section -->
   <section id="about" class="py-16 bg-gray-50">
-    <div class="m-auto max-w-7xl px-8 md:px-6">
-      <!-- heading text -->
-      <div class="text-center mb-5 sm:mb-10">
-        <span class="font-medium text-red-500">Sobre nós</span>
-        <h1 class="text-2xl font-bold text-slate-700 sm:text-3xl">Conheça-nos e aos nossos valores</h1>
+  <div class="m-auto max-w-7xl px-8 md:px-6">
+    <!-- heading text -->
+    <div class="text-center mb-5 sm:mb-10">
+      <span class="font-medium text-red-500">Sobre nós</span>
+      <h1 class="text-2xl font-bold text-slate-700 sm:text-3xl">Conheça-nos e aos nossos valores</h1>
+    </div>
+
+    <!-- services img -->
+    <div class="md:flex md:justify-between md:gap-6 xl:gap-10">
+      <div class="mb-5 max-h-[600px] overflow-hidden rounded-lg md:mb-0 md:w-5/12">
+        <img src="/public/assets/best_parts.svg" alt="Serviços" class=" scale-125 sm:w-full sm:object-cover">
       </div>
-
-      <!-- services img -->
-      <div class="md:flex md:justify-between md:gap-6 xl:gap-10">
-        <div class="mb-5 max-h-[600px] overflow-hidden rounded-lg md:mb-0 md:w-5/12">
-          <img src="/public/assets/best_parts.svg" alt="Serviços" class=" scale-125 sm:w-full sm:object-cover">
+      <div class="md:w-7/12">
+        <div class="mb-10 flex flex-col">
+          <p class="text-slate-500">Ser uma das melhores e maior empresa de gestão de projectos e investimento,
+            consequentemente criadora de emprego mundialmente. Identificar Projectos, negócios e investir nas soluções
+            de desenvolvimento e crescimento sustentável afim de garantir maior enriquecimento das pessoas e empresas.
+          </p>
         </div>
-        <div class="md:w-7/12">
-          <div class="mb-10 flex flex-col">
-            <p class="text-slate-500">Ser uma das melhores e maior empresa de gestão de projectos e investimento,
-              consequentemente criadora de emprego mundialmente. Identificar Projectos, negócios e investir nas soluções
-              de desenvolvimento e crescimento sustentável afim de garantir maior enriquecimento das pessoas e empresas.
-            </p>
-          </div>
 
-          <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <div class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg">
-              <ion-icon name="bar-chart-outline" class="mb-3 w-16 text-4xl"></ion-icon>
-              <h3 class="text-lg font-bold text-slate-600">Liderança</h3>
-            </div>
-            <div class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg">
-              <ion-icon name="glasses-outline" class="mb-3 w-16 text-4xl"></ion-icon>
-              <h3 class="text-lg font-bold text-slate-600">Foco</h3>
-            </div>
-            <div class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg">
-              <ion-icon name="body-outline" class="mb-3 w-16 text-4xl"></ion-icon>
-              <h3 class="text-lg font-bold text-slate-600">Dinamismo</h3>
-            </div>
-            <div class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg">
-              <ion-icon name="bulb-outline" class="mb-3 w-16 text-4xl"></ion-icon>
-              <h3 class="text-lg font-bold text-slate-600">Criatividade</h3>
-            </div>
-            <div class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg">
-              <ion-icon name="color-palette-outline" class="mb-3 w-16 text-4xl"></ion-icon>
-              <h3 class="text-lg font-bold text-slate-600">Honestidade</h3>
-            </div>
-            <div class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg">
-              <ion-icon name="hand-left-outline" class="mb-3 w-16 text-4xl"></ion-icon>
-              <h3 class="text-lg font-bold text-slate-600">Disciplina</h3>
-            </div>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg">
+            <ion-icon name="bar-chart-outline" class="mb-3 w-16 text-4xl"></ion-icon>
+            <h3 class="text-lg font-bold text-slate-600">Liderança</h3>
+          </div>
+          <div class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg">
+            <ion-icon name="glasses-outline" class="mb-3 w-16 text-4xl"></ion-icon>
+            <h3 class="text-lg font-bold text-slate-600">Foco</h3>
+          </div>
+          <div class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg">
+            <ion-icon name="body-outline" class="mb-3 w-16 text-4xl"></ion-icon>
+            <h3 class="text-lg font-bold text-slate-600">Dinamismo</h3>
+          </div>
+          <div class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg">
+            <ion-icon name="bulb-outline" class="mb-3 w-16 text-4xl"></ion-icon>
+            <h3 class="text-lg font-bold text-slate-600">Criatividade</h3>
+          </div>
+          <div class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg">
+            <ion-icon name="color-palette-outline" class="mb-3 w-16 text-4xl"></ion-icon>
+            <h3 class="text-lg font-bold text-slate-600">Honestidade</h3>
+          </div>
+          <div class="flex flex-col items-center justify-center rounded-xl bg-white px-4 py-8 shadow-lg">
+            <ion-icon name="hand-left-outline" class="mb-3 w-16 text-4xl"></ion-icon>
+            <h3 class="text-lg font-bold text-slate-600">Disciplina</h3>
           </div>
         </div>
       </div>
     </div>
+  </div>
   </section>
 
   <!-- Mission Section -->
   <section id="goals" class="py-16">
-    <div class="mx-auto max-w-7xl px-8 md:px-6">
-      <div class="md:flex md:justify-between md:gap-6">
-        <div class="md:w-6/12">
-          <!-- heading text -->
-          <div class="mb-5 sm:mb-10">
-            <span class="font-medium text-red-500">Missão</span>
-            <h1 class="text-2xl font-bold text-slate-700 sm:text-3xl">Conheça os nossos objectivos </h1>
-          </div>
-
-          <p class="mb-3 text-slate-500 md:mb-6">Identificar Projectos, negócios e investir nas soluções de
-            desenvolvimento e crescimento sustentável afim de garantir maior enriquecimento das pessoas e empresas.</p>
-          <ul>
-            <li class="mb-6 flex items-center">
-              <div
-                class="flex h-[35px] w-[35px] min-w-[35px] items-center justify-center rounded-full bg-red-500 text-white">
-                <ion-icon name="briefcase-outline"></ion-icon>
-              </div>
-              <p class="ml-4 max-w-md font-medium text-slate-600">Criar novo empreendedor que seja resistente, profissional e
-                gerador de valor.</p>
-            </li>
-            <li class="mb-6 flex items-center">
-              <div
-                class="flex h-[35px] w-[35px] min-w-[35px] items-center justify-center rounded-full bg-red-500 text-white">
-                <ion-icon name="briefcase-outline"></ion-icon>
-              </div>
-              <p class="ml-4 max-w-md font-medium text-slate-600">Incubar Empreendimentos e Start-Up, baseados em serviços em todo o país.</p>
-            </li>
-            <li class="mb-6 flex items-center">
-              <div
-                class="flex h-[35px] w-[35px] min-w-[35px] items-center justify-center rounded-full bg-red-500 text-white">
-                <ion-icon name="briefcase-outline"></ion-icon>
-              </div>
-              <p class="ml-4 max-w-md font-medium text-slate-600">Fornecer consultoria especializada em matérias de Gestão e Liderança.</p>
-            </li>
-          </ul>
-
-          <button
-            class="flex items-center justify-center gap-2 w-full rounded-md bg-red-500 px-8 py-2.5 font-semibold text-white hover:bg-red-600 duration-200 sm:w-auto">
-            <ion-icon name="logo-whatsapp"></ion-icon>
-            Entre em contacto
-          </button>
+  <div class="mx-auto max-w-7xl px-8 md:px-6">
+    <div class="md:flex md:justify-between md:gap-6">
+      <div class="md:w-6/12">
+        <!-- heading text -->
+        <div class="mb-5 sm:mb-10">
+          <span class="font-medium text-red-500">Missão</span>
+          <h1 class="text-2xl font-bold text-slate-700 sm:text-3xl">Conheça os nossos objectivos </h1>
         </div>
 
-        <!-- Mission image -->
-        <div class="mt-8 flex justify-center md:mt-0 md:w-5/12">
-          <img src="/public/assets/goals.svg" alt="about img" class="h-[400px] md:max-h-max">
-        </div>
+        <p class="mb-3 text-slate-500 md:mb-6">Identificar Projectos, negócios e investir nas soluções de
+          desenvolvimento e crescimento sustentável afim de garantir maior enriquecimento das pessoas e empresas.</p>
+        <ul>
+          <li class="mb-6 flex items-center">
+            <div
+              class="flex h-[35px] w-[35px] min-w-[35px] items-center justify-center rounded-full bg-red-500 text-white">
+              <ion-icon name="briefcase-outline"></ion-icon>
+            </div>
+            <p class="ml-4 max-w-md font-medium text-slate-600">Criar novo empreendedor que seja resistente, profissional e
+              gerador de valor.</p>
+          </li>
+          <li class="mb-6 flex items-center">
+            <div
+              class="flex h-[35px] w-[35px] min-w-[35px] items-center justify-center rounded-full bg-red-500 text-white">
+              <ion-icon name="briefcase-outline"></ion-icon>
+            </div>
+            <p class="ml-4 max-w-md font-medium text-slate-600">Incubar Empreendimentos e Start-Up, baseados em serviços em todo o país.</p>
+          </li>
+          <li class="mb-6 flex items-center">
+            <div
+              class="flex h-[35px] w-[35px] min-w-[35px] items-center justify-center rounded-full bg-red-500 text-white">
+              <ion-icon name="briefcase-outline"></ion-icon>
+            </div>
+            <p class="ml-4 max-w-md font-medium text-slate-600">Fornecer consultoria especializada em matérias de Gestão e Liderança.</p>
+          </li>
+        </ul>
+
+        <a
+          href="http://wa.me/244938103039" target="_blank"
+          class="flex items-center justify-center gap-2 w-full rounded-md bg-red-500 px-8 py-2.5 font-semibold text-white hover:bg-red-600 duration-200 lg:w-2/4 sm:w-auto">
+          <ion-icon name="logo-whatsapp"></ion-icon>
+          Entre em contacto
+        </a>
+      </div>
+
+      <!-- Mission image -->
+      <div class="mt-8 flex justify-center md:mt-0 md:w-5/12">
+        <img src="/public/assets/goals.svg" alt="about img" class="h-[400px] md:max-h-max">
       </div>
     </div>
+  </div>
   </section>
 
   <!-- Services Section -->
   <section id="services" class="py-16 bg-gray-50">
-    <div class="mx-auto max-w-7xl px-8 md:px-6">
-      <!-- heading text -->
-      <div class="text-center mb-5 sm:mb-10">
-        <span class="font-medium text-red-500">Serviços</span>
-        <h1 class="text-2xl font-bold text-slate-700 sm:text-3xl">Sectores de atuação</h1>
-        <p class="max-auto max-w-2 mt-2 text-slate-500">Conheça os sectores de atuação da Fingescon. Prestamos serviços
-          nas diferentes áreas disponíveis no mercado.</p>
-      </div>
-
-      <!-- box wrapper -->
-      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 xl:gap-8">
-        <div
-          class="group flex cursor-pointer flex-col items-center rounded-xl border border-red-500/10 bg-white px-5 py-8 shadow-lg shadow-red-300/10 duration-200 hover:bg-red-500">
-          <ion-icon name="infinite-outline" class="text-[55px] text-red-500 duration-200 group-hover:text-white"></ion-icon>
-          <h4 class="mt-3 mb-1 text-[17px] font-semibold text-slate-600 duration-200 group-hover:text-white">Contabilidade</h4>
-          <p class="text-center text-sm text-slate-500 duration-200 group-hover:text-blue-200">Acessoria empresarial, contribuindo na eficácia das suas decisões de gestão, administrativa e financeira.</p>
-        </div>
-        <div
-          class="group flex cursor-pointer flex-col items-center rounded-xl border border-red-500/10 bg-white px-5 py-8 shadow-lg shadow-red-300/10 duration-200 hover:bg-red-500">
-          <ion-icon name="water-outline" class="text-[55px] text-red-500 duration-200 group-hover:text-white">
-          </ion-icon>
-          <h4 class="mt-3 mb-1 text-[17px] font-semibold text-slate-600 duration-200 group-hover:text-white">Petróleo e
-            Gás</h4>
-          <p class="text-center text-sm text-slate-500 duration-200 group-hover:text-blue-200">Certificada pela ANPG
-            nº5417315800 / CL-ANPG/2022,
-            estando apta para prestar
-            todos os serviços disponíveis
-            pela Fingescon no sector de
-            Petróleo e Gás em Angola.</p>
-        </div>
-        <div
-          class="group flex cursor-pointer flex-col items-center rounded-xl border border-red-500/10 bg-white px-5 py-8 shadow-lg shadow-red-300/10 duration-200 hover:bg-red-500">
-          <ion-icon name="newspaper-outline" class="text-[55px] text-red-500 duration-200 group-hover:text-white">
-          </ion-icon>
-          <h4 class="mt-3 mb-1 text-[17px] font-semibold text-slate-600 duration-200 group-hover:text-white">Incubação (CINEPI)</h4>
-          <p class="text-center text-sm text-slate-500 duration-200 group-hover:text-blue-200">
-            Gestora de Projectos de Investimento, que capta
-            empreendimentos ou ideias potenciais de negócios no sentido de
-            transformar em empreendimentos reais e sustentáveis, através da
-            gestão de projectos implementados com recursos próprios,
-            doações e financiamento externo.</p>
-        </div>
-        <div
-          class="group flex cursor-pointer flex-col items-center rounded-xl border border-red-500/10 bg-white px-5 py-8 shadow-lg shadow-red-300/10 duration-200 hover:bg-red-500">
-          <ion-icon name="people-outline" class="text-[55px] text-red-500 duration-200 group-hover:text-white">
-          </ion-icon>
-          <h4 class="mt-3 mb-1 text-[17px] font-semibold text-slate-600 duration-200 group-hover:text-white">Recursos Humanos</h4>
-          <p class="text-center text-sm text-slate-500 duration-200 group-hover:text-blue-200">Consultoria e formação técnica e profissional, focada no desenvolvimento das pessoas e no apoio para o crescimento do sucesso profissional.</p>
-        </div>
-        <div
-          class="group flex cursor-pointer flex-col items-center rounded-xl border border-red-500/10 bg-white px-5 py-8 shadow-lg shadow-red-300/10 duration-200 hover:bg-red-500">
-          <ion-icon name="globe-outline" class="text-[55px] text-red-500 duration-200 group-hover:text-white">
-          </ion-icon>
-          <h4 class="mt-3 mb-1 text-[17px] font-semibold text-slate-600 duration-200 group-hover:text-white">Comunicação e Marketing</h4>
-          <p class="text-center text-sm text-slate-500 duration-200 group-hover:text-blue-200">Comunicação e Marketing em 360o, publicidade, desenvolvimento e gestão de marcas, auditoria, consultoria em Marketing e desenvolvimento de Planos de Marketing.</p>
-        </div>
-        <div
-          class="group flex cursor-pointer flex-col items-center rounded-xl border border-red-500/10 bg-white px-5 py-8 shadow-lg shadow-red-300/10 duration-200 hover:bg-red-500">
-          <ion-icon name="trash-outline" class="text-[55px] text-red-500 duration-200 group-hover:text-white">
-          </ion-icon>
-          <h4 class="mt-3 mb-1 text-[17px] font-semibold text-slate-600 duration-200 group-hover:text-white">Limpeza e saneamento básico</h4>
-          <p class="text-center text-sm text-slate-500 duration-200 group-hover:text-blue-200">Recolha de resíduos sólidos, limpeza de edifícios, materiais de Biossegurança</p>
-        </div>
-      </div>
-
+  <div class="mx-auto max-w-7xl px-8 md:px-6">
+    <!-- heading text -->
+    <div class="text-center mb-5 sm:mb-10">
+      <span class="font-medium text-red-500">Serviços</span>
+      <h1 class="text-2xl font-bold text-slate-700 sm:text-3xl">Sectores de atuação</h1>
+      <p class="max-auto max-w-2 mt-2 text-slate-500">Conheça os sectores de atuação da Fingescon. Prestamos serviços
+        nas diferentes áreas disponíveis no mercado.</p>
     </div>
+
+    <!-- box wrapper -->
+    <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 xl:gap-8">
+      <div
+        class="group flex cursor-pointer flex-col items-center rounded-xl border border-red-500/10 bg-white px-5 py-8 shadow-lg shadow-red-300/10 duration-200 hover:bg-red-500">
+        <ion-icon name="infinite-outline" class="text-[55px] text-red-500 duration-200 group-hover:text-white"></ion-icon>
+        <h4 class="mt-3 mb-1 text-[17px] font-semibold text-slate-600 duration-200 group-hover:text-white">Contabilidade</h4>
+        <p class="text-center text-sm text-slate-500 duration-200 group-hover:text-blue-200">Acessoria empresarial, contribuindo na eficácia das suas decisões de gestão, administrativa e financeira.</p>
+      </div>
+      <div
+        class="group flex cursor-pointer flex-col items-center rounded-xl border border-red-500/10 bg-white px-5 py-8 shadow-lg shadow-red-300/10 duration-200 hover:bg-red-500">
+        <ion-icon name="water-outline" class="text-[55px] text-red-500 duration-200 group-hover:text-white">
+        </ion-icon>
+        <h4 class="mt-3 mb-1 text-[17px] font-semibold text-slate-600 duration-200 group-hover:text-white">Petróleo e
+          Gás</h4>
+        <p class="text-center text-sm text-slate-500 duration-200 group-hover:text-blue-200">Certificada pela ANPG
+          nº5417315800 / CL-ANPG/2022,
+          estando apta para prestar
+          todos os serviços disponíveis
+          pela Fingescon no sector de
+          Petróleo e Gás em Angola.</p>
+      </div>
+      <div
+        class="group flex cursor-pointer flex-col items-center rounded-xl border border-red-500/10 bg-white px-5 py-8 shadow-lg shadow-red-300/10 duration-200 hover:bg-red-500">
+        <ion-icon name="newspaper-outline" class="text-[55px] text-red-500 duration-200 group-hover:text-white">
+        </ion-icon>
+        <h4 class="mt-3 mb-1 text-[17px] font-semibold text-slate-600 duration-200 group-hover:text-white">Incubação (CINEPI)</h4>
+        <p class="text-center text-sm text-slate-500 duration-200 group-hover:text-blue-200">
+          Gestora de Projectos de Investimento, que capta
+          empreendimentos ou ideias potenciais de negócios no sentido de
+          transformar em empreendimentos reais e sustentáveis, através da
+          gestão de projectos implementados com recursos próprios,
+          doações e financiamento externo.</p>
+      </div>
+      <div
+        class="group flex cursor-pointer flex-col items-center rounded-xl border border-red-500/10 bg-white px-5 py-8 shadow-lg shadow-red-300/10 duration-200 hover:bg-red-500">
+        <ion-icon name="people-outline" class="text-[55px] text-red-500 duration-200 group-hover:text-white">
+        </ion-icon>
+        <h4 class="mt-3 mb-1 text-[17px] font-semibold text-slate-600 duration-200 group-hover:text-white">Recursos Humanos</h4>
+        <p class="text-center text-sm text-slate-500 duration-200 group-hover:text-blue-200">Consultoria e formação técnica e profissional, focada no desenvolvimento das pessoas e no apoio para o crescimento do sucesso profissional.</p>
+      </div>
+      <div
+        class="group flex cursor-pointer flex-col items-center rounded-xl border border-red-500/10 bg-white px-5 py-8 shadow-lg shadow-red-300/10 duration-200 hover:bg-red-500">
+        <ion-icon name="globe-outline" class="text-[55px] text-red-500 duration-200 group-hover:text-white">
+        </ion-icon>
+        <h4 class="mt-3 mb-1 text-[17px] font-semibold text-slate-600 duration-200 group-hover:text-white">Comunicação e Marketing</h4>
+        <p class="text-center text-sm text-slate-500 duration-200 group-hover:text-blue-200">Comunicação e Marketing em 360o, publicidade, desenvolvimento e gestão de marcas, auditoria, consultoria em Marketing e desenvolvimento de Planos de Marketing.</p>
+      </div>
+      <div
+        class="group flex cursor-pointer flex-col items-center rounded-xl border border-red-500/10 bg-white px-5 py-8 shadow-lg shadow-red-300/10 duration-200 hover:bg-red-500">
+        <ion-icon name="trash-outline" class="text-[55px] text-red-500 duration-200 group-hover:text-white">
+        </ion-icon>
+        <h4 class="mt-3 mb-1 text-[17px] font-semibold text-slate-600 duration-200 group-hover:text-white">Limpeza e saneamento básico</h4>
+        <p class="text-center text-sm text-slate-500 duration-200 group-hover:text-blue-200">Recolha de resíduos sólidos, limpeza de edifícios, materiais de Biossegurança</p>
+      </div>
+    </div>
+
+  </div>
   </section>
 
   <!-- QA -->
@@ -312,13 +307,13 @@
       <!-- heading text -->
       <div class="mb-5 sm:mb-10">
         <span class="font-medium text-red-500">Nossas FAQ</span>
-        <h1 class="mb-8 text-2xl font-bold text-slate-700 sm:text-3xl">Perguntas e Respostas Frequentes</h1>
+        <h1 class="mb-8 text-2xl font-bold text-slate-700 sm:text-3xl">Perguntas Frequentes</h1>
 
         <!-- wrapper -->
-        <div class="md:flex md:justify-between md:gap-6">
+        <div class="md:flex md:justify-between items-center md:gap-6">
 
-          <div class="mb-8 flex justify-center md:mb-0 md:w-5/12">
-            <img src="/public/assets/questions.svg" alt="Perguntas e respostas" class="h-[400px] md:max-h-max">
+          <div class="mb-8 flex justify-center md:mb-0 md:w-5/12 ">
+            <img src="/public/assets/man-questions.jpg" alt="Perguntas e respostas" class="rounded-xl">
           </div>
 
           <div class="md:w-6/12">
@@ -608,83 +603,81 @@
       <!-- footer -->
       <div class="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
         <div class="md:max-w-md lg:col-span-2">
-          <img src="/public/assets/logo.png" alt="Footer logo" class="w-36">
+          <img src="/public/assets/logotipo.png" alt="Footer logo" class="w-36">
           <div class="mt-4 lg:max-w-sm"> 
             <p class="text-sm text-slate-500 ">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates quisquam eius impedit repudiandae non odit cupiditate veniam error laboriosam officiis dicta sint unde deleniti, sit officia earum totam reprehenderit hic.
+              Com vasta experiência no seguimento de actuação, fundada desde 2011, temos por objectivo fornecer aos nossos clientes, vários serviços em diversos sectores.
             </p>
-            <p class="text-sm text-slate-500 mt-4 ">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates quisquam eius impedit repudiandae non odit cupiditate veniam error laboriosam officiis dicta sint unde deleniti, sit officia earum totam reprehenderit hic.
-            </p>
+            
           </div>
         </div>
 
         <div class="grid row-gap-8 grid-cols-2 gap-5 md:grid-cols-4 lg:col-span-4">
           <div class="">
             <p class="font-semibold text-slate-700 ">
-              Sectores
+              Contabilidade
             </p>
 
             <ul class="mt-2 space-y-2">
               <li class="">
-                <a href="#" class="text-slate-500 transition-colors duration-300 hover:text-slate-700">Pescas</a>
+                <a href="#" class="text-slate-500 transition-colors duration-300 hover:text-slate-700">Contabilidade e auditoria</a>
               </li>
               <li class="">
-                <a href="#" class="text-slate-500 transition-colors duration-300 hover:text-slate-700">Comunicação e Marketing</a>
+                <a href="#" class="text-slate-500 transition-colors duration-300 hover:text-slate-700">Consultoria Financeira</a>
               </li>
               <li class="">
-                <a href="#" class="text-slate-500 transition-colors duration-300 hover:text-slate-700">Petróleo e Gás</a>
+                <a href="#" class="text-slate-500 transition-colors duration-300 hover:text-slate-700">Formação sobre o emprego .</a>
               </li>
             </ul>
           </div>
           <div class="">
             <p class="font-semibold text-slate-700 ">
-              Sectores
+              Recursos Humanos
             </p>
 
             <ul class="mt-2 space-y-2">
               <li class="">
-                <a href="#" class="text-slate-500 transition-colors duration-300 hover:text-slate-700">Pescas</a>
+                <a href="#" class="text-slate-500 transition-colors duration-300 hover:text-slate-700">Recrutamento e Selecção de Pessoal</a>
               </li>
               <li class="">
-                <a href="#" class="text-slate-500 transition-colors duration-300 hover:text-slate-700">Comunicação e Marketing</a>
+                <a href="#" class="text-slate-500 transition-colors duration-300 hover:text-slate-700">Consultoria em recursos humanos</a>
               </li>
               <li class="">
-                <a href="#" class="text-slate-500 transition-colors duration-300 hover:text-slate-700">Petróleo e Gás</a>
+                <a href="#" class="text-slate-500 transition-colors duration-300 hover:text-slate-700">Auditoria de Conformidades legais em Recuros Humanos</a>
               </li>
             </ul>
           </div>
           <div class="">
             <p class="font-semibold text-slate-700 ">
-              Sectores
+              Hotelaria e Turismo
             </p>
 
             <ul class="mt-2 space-y-2">
               <li class="">
-                <a href="#" class="text-slate-500 transition-colors duration-300 hover:text-slate-700">Pescas</a>
+                <a href="#" class="text-slate-500 transition-colors duration-300 hover:text-slate-700">Hotelaria</a>
               </li>
               <li class="">
-                <a href="#" class="text-slate-500 transition-colors duration-300 hover:text-slate-700">Comunicação e Marketing</a>
+                <a href="#" class="text-slate-500 transition-colors duration-300 hover:text-slate-700">Restauração e Salão de Eventos</a>
               </li>
               <li class="">
-                <a href="#" class="text-slate-500 transition-colors duration-300 hover:text-slate-700">Petróleo e Gás</a>
+                <a href="#" class="text-slate-500 transition-colors duration-300 hover:text-slate-700">Catering</a>
               </li>
             </ul>
           </div>
           <div class="">
             <p class="font-semibold text-slate-700 ">
-              Sectores
+              Agroindústrial e Pesca
             </p>
 
             <ul class="mt-2 space-y-2">
               <li class="">
-                <a href="#" class="text-slate-500 transition-colors duration-300 hover:text-slate-700">Pescas</a>
+                <a href="#" class="text-slate-500 transition-colors duration-300 hover:text-slate-700">Agropecuária</a>
               </li>
               <li class="">
-                <a href="#" class="text-slate-500 transition-colors duration-300 hover:text-slate-700">Comunicação e Marketing</a>
+                <a href="#" class="text-slate-500 transition-colors duration-300 hover:text-slate-700">Pesca</a>
               </li>
               <li class="">
-                <a href="#" class="text-slate-500 transition-colors duration-300 hover:text-slate-700">Petróleo e Gás</a>
+                <a href="#" class="text-slate-500 transition-colors duration-300 hover:text-slate-700">Comércio</a>
               </li>
             </ul>
           </div>
@@ -708,6 +701,5 @@
       </div>
     </div>
   </footer>
-</body>
-
+  </body>
 </html>
